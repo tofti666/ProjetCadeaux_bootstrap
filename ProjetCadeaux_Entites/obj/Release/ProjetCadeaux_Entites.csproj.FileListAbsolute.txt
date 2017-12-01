@@ -1,0 +1,8 @@
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\bin\Release\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\bin\Release\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\obj\Release\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\obj\Release\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\bin\Release\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\bin\Release\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\obj\Release\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\obj\Release\ProjetCadeaux_Entites.pdb

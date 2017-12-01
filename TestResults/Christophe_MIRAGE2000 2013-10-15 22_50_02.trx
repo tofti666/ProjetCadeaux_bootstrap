@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="991d1758-5063-4710-ae74-bbf8953cceb0" name="Christophe@MIRAGE2000 2013-10-15 22:50:02" runUser="Mirage2000\Christophe" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="aa07298a-2b6c-4ec5-b8bf-daeda5d6dc46">
+    <Description>Il s'agit des paramètres de test par défaut pour une série de tests locale.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Christophe_MIRAGE2000 2013-10-15 22_50_02">
+      <DeploymentItem filename="C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Connection\bin\Debug\ProjetCadeaux_Connection.dll" />
+      <DeploymentItem filename="C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_BLL\ProjetCadeaux_BLL\bin\Debug\ProjetCadeaux_BLL.dll" />
+      <DeploymentItem filename="E:\PostgreSQL\9.2\bin\Npgsql.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-10-15T22:50:02.9783276+02:00" queuing="2013-10-15T22:50:02.9953285+02:00" start="2013-10-15T22:50:02.9983287+02:00" finish="2013-10-15T22:50:06.7695444+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="envoiMailTest" storage="c:\users\christophe\documents\visual studio 2010\projects\projetcadeaux\testprojectcadeaux\bin\debug\testprojectcadeaux.dll" id="d9ce5c4d-fe57-a2a7-95bf-971dd2fabbc0">
+      <Execution id="ca146cea-f648-4be7-8d7b-b7434d1c7482" />
+      <TestMethod codeBase="C:/Users/Christophe/Documents/Visual Studio 2010/Projects/ProjetCadeaux/TestProjectCadeaux/bin/Debug/TestProjectCadeaux.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProjectCadeaux.GestionMailTest, TestProjectCadeaux, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="envoiMailTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d9ce5c4d-fe57-a2a7-95bf-971dd2fabbc0" executionId="ca146cea-f648-4be7-8d7b-b7434d1c7482" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ca146cea-f648-4be7-8d7b-b7434d1c7482" testId="d9ce5c4d-fe57-a2a7-95bf-971dd2fabbc0" testName="envoiMailTest" computerName="MIRAGE2000" duration="00:00:03.6037115" startTime="2013-10-15T22:50:02.9993288+02:00" endTime="2013-10-15T22:50:06.7575437+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca146cea-f648-4be7-8d7b-b7434d1c7482">
+    </UnitTestResult>
+  </Results>
+</TestRun>

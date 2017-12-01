@@ -1,0 +1,10 @@
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\bin\Debug\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\bin\Debug\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\obj\Debug\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\obj\Debug\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\ProjetCadeaux_Entites\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\bin\Debug\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\bin\Debug\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\obj\Debug\ProjetCadeaux_Entites.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\obj\Debug\ProjetCadeaux_Entites.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux_bootstrap\ProjetCadeaux_Entites\obj\Debug\ProjetCadeaux_Entites.csprojResolveAssemblyReference.cache
