@@ -176,6 +176,13 @@ namespace ProjetCadeauxBLL
             return listeService.getAllListeIdeesCadeaux(pEvt.id_evenement);
         }
 
+
+        /// <summary>
+        /// Récupère les idées cadeaux pour une personne et un événement donné
+        /// </summary>
+        /// <param name="pPersonne">La personne qui a la liste</param>
+        /// <param name="pEvenement">L'événement pour lequel il y a une liste</param>
+        /// <returns></returns>
         public List<IdeeCadeauPourListe> getIdeesCadeauxByPersonneAndEvenement(Personne pPersonne, Evenement pEvenement){
 
 

@@ -27,6 +27,7 @@ namespace ProjetCadeaux.pages.Events
         public ParticipantBLL participantBLL = new ParticipantBLL();
         public ParticipationsBLL participationBLL = new ParticipationsBLL();
         public CommentairesBLL commentaireBLL = new CommentairesBLL();
+        public ListeIdeesCadeauxBLL ideecadeauBLL = new ListeIdeesCadeauxBLL();
 
         public List<IdeeCadeauPourListe> listeCadeaux = new List<IdeeCadeauPourListe>();
 
@@ -38,17 +39,10 @@ namespace ProjetCadeaux.pages.Events
             {
                 if (Request.Params["evenementId"] != null)
                 {
-                    /*HttpCookie cookie = new HttpCookie("evenementId");
-                    cookie.Value = Request.Params["evenementId"].ToString();
-                    Response.Cookies.Add(cookie);*/
                     Session["evenementId"] = Request.Params["evenementId"].ToString();
                 }
                 if (Request.Params["idpersonne"] != null)
                 {
-                    //ViewState["idPersonneListe"] = Request.Params["idpersonne"].ToString();
-                    /*HttpCookie cookiePersonneListe = new HttpCookie("idPersonneListe");
-                    cookiePersonneListe.Value = Request.Params["idPersonneListe"].ToString();
-                    Response.Cookies.Add(cookiePersonneListe);*/
                     Session["idPersonneListe"] = Request.Params["idpersonne"].ToString();
                 }
 
@@ -62,6 +56,18 @@ namespace ProjetCadeaux.pages.Events
                 {
                     enregistrerCommentaire();
                 }
+                if (Request.Params["sauveridee"] != null)
+                {
+                    enregistrerIdee();
+                }
+                if (Request.Params["sauverparticipation"] != null)
+                {
+                    enregistrerParticipation();
+                }
+                if (Request.Params["sauverresponsable"] != null)
+                {
+                    enregistrerResponsable();
+                }
 
                 participantListe = participantBLL.getParticipantAyantListeByEvenementAndPersonne(evenement, personneListe);
 
@@ -74,6 +80,9 @@ namespace ProjetCadeaux.pages.Events
 
                 RecupererListeCadeaux();
 
+                //Récupérer responsable de la liste
+                RecupererResponsableListe();
+
                 
             }
             else
@@ -81,6 +90,51 @@ namespace ProjetCadeaux.pages.Events
                 Response.Redirect("/Reconnecte.aspx");
             }
             
+        }
+
+        private void enregistrerResponsable()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void RecupererResponsableListe()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void enregistrerParticipation()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void enregistrerIdee()
+        {
+            if (Request.Form["titre"] != null )
+            {
+                IdeeCadeauPourListe idee = new IdeeCadeauPourListe();
+                idee.cadeau = new Cadeau();
+
+                if( Request.Form["description"] != null){
+                    idee.cadeau.description = Request.Form["description"].ToString();
+                }
+                if( Request.Form["prix"] != null){
+                    idee.cadeau.prix = Request.Form["prix"].ToString();
+                }
+                idee.cadeau.intitule_cadeau = Request.Form["titre"].ToString();
+
+                idee.dateAjoutIdeeCadeau = DateTime.Now;
+
+                idee.ideeCadeauPour = personneListe;
+                idee.proposePar = personneConnectee;
+
+
+
+                    comm.commentaire = commentaire;
+
+                    //Enregistrer un nouveau commentaire
+                    commentaireBLL.enregistrerCommentaire(evenement, personneListe, personneConnectee, comm);
+                }
+            }    
         }
 
         private void enregistrerCommentaire()
@@ -132,20 +186,10 @@ namespace ProjetCadeaux.pages.Events
         {
 
             if (Session["connecte"] != null)
-            {
-                /*IdeesCadeaux idee = new IdeesCadeaux();
-
-                DataTable idees = new DataTable();
-
-                idees = idee.getIdeesCadeauxByPersonneEvenementAndPersonneConnectee(personneListe.id_personne, evenement.id_evenement, personneConnectee.id_personne);
-                */
+            {         
                 ListeIdeesCadeauxBLL listeBLL = new ListeIdeesCadeauxBLL();
 
-                
-                
                 listeCadeaux = listeBLL.getIdeesCadeauxByPersonneAndEvenement(personneListe, evenement);
-
-                
             }
             else
             {

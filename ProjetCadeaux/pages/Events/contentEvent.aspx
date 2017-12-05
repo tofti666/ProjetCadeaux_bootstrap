@@ -46,81 +46,37 @@
             }
         </script>
         <script type="text/javascript" language="javascript">
-              $(function () {
-                  var dialog, form,
-
-              name = $("#name"),
-              email = $("#email"),
-              password = $("#password"),
-              allFields = $([]).add(name).add(email).add(password),
-              tips = $(".validateTips");
-
-                  function updateTips(t) {
-                      tips
-                .text(t)
-                .addClass("ui-state-highlight");
-                      setTimeout(function () {
-                          tips.removeClass("ui-state-highlight", 1500);
-                      }, 500);
-                  }
-
-                  function checkLength(o, n, min, max) {
-                      if (o.val().length > max || o.val().length < min) {
-                          o.addClass("ui-state-error");
-                          updateTips("Length of " + n + " must be between " +
-                  min + " and " + max + ".");
-                          return false;
-                      } else {
-                          return true;
-                      }
-                  }
-
-
-                  function addUser() {
-                      var valid = true;
-
-
-
-                      if (valid) {
-
-                          dialog.dialog("close");
-                      }
-                      return valid;
-                  }
-
-                  dialog = $("#dialog-form").dialog({
-                      autoOpen: false,
-                      height: 400,
-                      width: 350,
-                      modal: true,
-                      buttons: {
-                          "Ajouter le cadeau": addUser,
-                          Cancel: function () {
-                              dialog.dialog("close");
-                          }
-                      },
-                      close: function () {
-                          form[0].reset();
-                          allFields.removeClass("ui-state-error");
-                      }
+              function enregistrerParticipation() {
+                  $.ajax({
+                      url: "contentEvent.aspx?sauverparticipation=true",
+                      type: "POST",
+                      data: $('#form_participation').serialize(),
+                      success:
+                function (retour) {
+                    $('#contentListe').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
+                }
                   });
-
-                  form = dialog.find("#formAjoutCadeau").on("submit", function (event) {
-                      event.preventDefault();
-                      addUser();
-                  });
-
-                  $("#btnAjoutCadeau").button().on("click", function () {
-                      dialog.dialog("open");
-                  });
-              });
+              }
+          </script>
+           <script type="text/javascript" language="javascript">
+                      function enregistrerParticipation() {
+                          $.ajax({
+                              url: "contentEvent.aspx?sauveridee=true",
+                              type: "POST",
+                              data: $('#formAjoutCadeau').serialize(),
+                              success:
+                function (retour) {
+                    $('#contentListe').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
+                }
+                          });
+                      }
           </script>
     </head>
 
     <body>
 
         <form id="form1">
-            <h3>Voir la liste de <strong><%=participantListe.nom_participant%></strong></h3>
+            <h3>Voir la liste de <strong><%=participantListe.nom_participant%></strong></h3>&nbsp;&nbsp;&nbsp;(Il n'y a pas de responsable pour cette liste !) ou (Machin est responsable)
 
             <!-- Afficher un bouton pour devenir responsable si la personne n'en a pas -->
 
@@ -141,8 +97,32 @@
                 </div>
                 <div class="col-xs-12 col-md-4" >
                     <asp:HyperLink style="color:White;" CssClass="btn btn-primary" ID="HyperLink1" runat="server" Text="Modifier ma participation"
-                        NavigateUrl="" Visible="true" />
+                        NavigateUrl="" Visible="true" onclick="$('#div_participation_outside').show();" />
                 </div>
+
+                <div id="div_participation_outside" class="modalPopupCustomOutside" >
+                    <div id="div_participation_inside" title="Modifier ma participation" class="modalPopupCustomInside">
+                        <form id="form_participation">
+                            <fieldset>
+                                <div class="row" style="margin-left:25px;">
+                                    <div class="row" style="margin-left:0px;">
+                                        <label class="col-xs-12"><h2>Modifier ma participation à la liste</h2></label>
+                                        <label for="name" class="col-xs-12" style="margin-top:30px;">Participation</label>
+                                        <input type="text" name="participation" id="participation" value="" placeholder="participation à la liste" 
+                                            style="width:80%;" class="form-control ui-widget-content ui-corner-all col-xs-12" /> 
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input class="btn btn-success col-xs-offset-3 col-xs-3" value="Enregistrer" onclick="$('#div_participation_outside').hide();" />
+                                        <input class="btn btn-default col-xs-3" value="Annuler" onclick="$('#div_participation_outside').hide();" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Afficher la liste des cadeaux de la personne -->
@@ -195,25 +175,36 @@
                    } %>
        
             <div class="row" style=" margin-top:10px; padding-left:30px;">
-                <a style="color:White;" class="btn btn-primary" id="btnAjoutCadeau" >Ajouter une idée de cadeau</a>
+                <a style="color:White;" class="btn btn-primary" id="btnAjoutCadeau" onclick="$('#modal_pop_up').show();" >Ajouter une idée de cadeau</a>
             </div>
 
-            <div id="dialog-form" title="Create new user">
-                <p class="validateTips">All form fields are required.</p>
- 
-                <form id="formAjoutCadeau">
-                    <fieldset>
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
- 
-                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
-                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-                    </fieldset>
-                </form>
+            <div id="modal_pop_up" class="modalPopupCustomOutside" >
+                <div id="dialog-form" title="Create new user" class="modalPopupCustomInside">
+                    <form id="formAjoutCadeau">
+                        <fieldset>
+                            <div class="row" style="margin-left:25px;">
+                                <div class="row" style="margin-left:0px;">
+                                    <label class="col-xs-12"><h2>Ajouter une idée de cadeau</h2></label>
+                                    <label for="name" class="col-xs-12" style="margin-top:30px;">Titre</label>
+                                    <input type="text" name="titre" id="titre" value="" placeholder="titre du cadeau" 
+                                            style="width:80%;" class="form-control ui-widget-content ui-corner-all col-xs-12" />
+                                    <label for="email" class="col-xs-12">Description</label>
+                                    <textarea rows="5" name="description" id="description" 
+                                            placeholder="description du cadeau" style="width:80%;" class="form-control ui-widget-content ui-corner-all col-xs-12" />
+                                    <label for="password" class="col-xs-12">Prix</label>
+                                    <input type="text" name="prix" id="prix" value="" placeholder="ordre d'idée du prix" maxlength="10" 
+                                            style="width:80%;" class="form-control ui-widget-content ui-corner-all col-xs-12" />
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                    <input class="btn btn-success col-xs-offset-3 col-xs-3" value="Enregistrer" onclick="$('#modal_pop_up').hide();" />
+                                    <input class="btn btn-default col-xs-3" value="Annuler" onclick="$('#modal_pop_up').hide();" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
 
 
@@ -290,7 +281,7 @@
             <div class="row" style="margin-top:5px;">
             
                 <div class="col-xs-12">
-                    <textarea id="commentaire" name="commentaire" class="jqte-test" rows="5" style="width:100%;"></textarea>
+                    <textarea id="commentaire" name="commentaire" class="jqte-test" rows="5" style="width:100%; border:1px solid grey; border-radius:5px;"></textarea>
                 </div>
             
                 <div class="col-xs-12" style="margin-top:5px;">
