@@ -1,0 +1,7 @@
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\bin\Debug\TestProjetCadeaux.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\bin\Debug\TestProjetCadeaux.pdb
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\bin\Debug\TestProjetCadeaux.xml
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\obj\Debug\TestProjetCadeaux.dll
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\obj\Debug\TestProjetCadeaux.xml
+C:\Users\Christophe\Documents\Visual Studio 2010\Projects\ProjetCadeaux\TestProjetCadeaux\obj\Debug\TestProjetCadeaux.pdb

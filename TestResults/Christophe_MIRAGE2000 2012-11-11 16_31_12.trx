@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="56020d60-24d7-43f6-95c3-6837946732f0" name="Christophe@MIRAGE2000 2012-11-11 16:31:12" runUser="Mirage2000\Christophe" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="aa07298a-2b6c-4ec5-b8bf-daeda5d6dc46">
+    <Description>Il s'agit des paramètres de test par défaut pour une série de tests locale.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Christophe_MIRAGE2000 2012-11-11 16_31_12" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-11-11T16:31:12.3787001+01:00" queuing="2012-11-11T16:31:14.1798031+01:00" start="2012-11-11T16:31:14.3088105+01:00" finish="2012-11-11T16:31:15.1378579+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\christophe\documents\visual studio 2010\projects\projetcadeaux\testprojetcadeaux\bin\debug\testprojetcadeaux.dll" id="0f29ef8f-7bda-a410-8a8a-a285e1acfac4">
+      <Execution id="ccd82cd5-7e8a-465d-a887-380e298aa6ed" />
+      <TestMethod codeBase="C:/Users/Christophe/Documents/Visual Studio 2010/Projects/ProjetCadeaux/TestProjetCadeaux/bin/Debug/TestProjetCadeaux.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProjetCadeaux.UnitTest1, TestProjetCadeaux, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0f29ef8f-7bda-a410-8a8a-a285e1acfac4" executionId="ccd82cd5-7e8a-465d-a887-380e298aa6ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ccd82cd5-7e8a-465d-a887-380e298aa6ed" testId="0f29ef8f-7bda-a410-8a8a-a285e1acfac4" testName="TestMethod1" computerName="MIRAGE2000" duration="00:00:00.0070337" startTime="2012-11-11T16:31:14.3708140+01:00" endTime="2012-11-11T16:31:15.0528530+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccd82cd5-7e8a-465d-a887-380e298aa6ed">
+    </UnitTestResult>
+  </Results>
+</TestRun>
