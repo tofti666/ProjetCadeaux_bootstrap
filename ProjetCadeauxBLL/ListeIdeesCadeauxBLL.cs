@@ -191,5 +191,26 @@ namespace ProjetCadeauxBLL
             return listeCadeauDAL.getListeIdeesCadeauxByPersonneEtEvenement(pPersonne.id_personne, pEvenement.id_evenement);
 
         }
+
+        /// <summary>
+        /// Récupère la liste associée à la personne et à l'évènement, et appelle la fonction qui ajoute un cadeau à une liste
+        /// </summary>
+        /// <param name="pPers"></param>
+        /// <param name="pEvt"></param>
+        /// <param name="pIdee"></param>
+        /// <returns></returns>
+        public bool ajouterCadeauToListe(Evenement pEvt, IdeeCadeauPourListe pIdee)
+        {
+            Boolean retour = true;
+
+            ListeIdeesCadeaux listeRetour = getListeIdeesCadeaux(pIdee.ideeCadeauPour, pEvt);
+
+            ListeIdeesCadeauxDAL listeService = new ListeIdeesCadeauxDAL();
+
+            retour = listeService.ajouterCadeauToListe(listeRetour.id_listeIdeesCadeaux, pIdee.id_ideeCadeau);
+
+            return retour;
+
+        }
     }
 }

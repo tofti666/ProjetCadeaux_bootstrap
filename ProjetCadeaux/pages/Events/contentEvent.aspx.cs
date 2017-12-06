@@ -127,15 +127,13 @@ namespace ProjetCadeaux.pages.Events
                 idee.ideeCadeauPour = personneListe;
                 idee.proposePar = personneConnectee;
 
+                idee.
 
 
-                    comm.commentaire = commentaire;
-
-                    //Enregistrer un nouveau commentaire
-                    commentaireBLL.enregistrerCommentaire(evenement, personneListe, personneConnectee, comm);
-                }
-            }    
-        }
+                //Enregistrer un nouveau commentaire
+                ideecadeauBLL.ajouterCadeauToListe(idee);
+            }
+        }    
 
         private void enregistrerCommentaire()
         {
